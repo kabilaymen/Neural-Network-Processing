@@ -10,7 +10,7 @@ void setup() {
   size(800, 500);
   structure = new int[] { 2, 3, 1 };
   dinputs = new float[][] {{0, 0}, {1, 1}, {0, 1}, {1, 0}};
-  doutputs = new float[][] {{1}, {1}, {1}, {0}};
+  doutputs = new float[][] {{0}, {0}, {1}, {1}};
   brain = new NeuralNetwork(structure);
   inputs = new float[structure[0]];
   for (int i = 0; i < inputs.length; i++)
