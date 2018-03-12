@@ -29,7 +29,7 @@ void draw() {
 
   if (train) {
     train();
-    show(5);
+    xor(5);
   }
 }
 
@@ -45,7 +45,7 @@ void keyPressed() {
   }
 }
 
-void show(int resolution) {
+void xor(int resolution) {
   noStroke();
   // stroke(0);
   // strokeWeight(1);
