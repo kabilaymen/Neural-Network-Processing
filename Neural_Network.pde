@@ -10,9 +10,9 @@ void setup() {
   structure = new int[] { 2, 2, 1 };
   training = new float[][] {
     {0, 0}, {0},
-    {1, 0}, {1}, 
-    {0, 1}, {0}, 
-    {1, 1}, {1}
+    {1, 1}, {0}, 
+    {0, 1}, {1}, 
+    {1, 0}, {1}
   };
   brain = new NeuralNetwork(structure);
   inputs = new float[structure[0]];
