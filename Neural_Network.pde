@@ -1,16 +1,15 @@
 int[] structure;
 NeuralNetwork brain;
 float[] inputs;
-float[][] dinputs;
-float[][] doutputs;
-final int speed = 2000;
+float[][] training_inputs, training_outputs;
+final int speed = 5000;
 boolean train;
 
 void setup() {
   size(800, 500);
   structure = new int[] { 2, 3, 1 };
-  dinputs = new float[][] {{0, 0}, {1, 1}, {0, 1}, {1, 0}};
-  doutputs = new float[][] {{0}, {0}, {1}, {1}};
+  training_inputs = new float[][] {{0, 0}, {1, 1}, {0, 1}, {1, 0}};
+  training_outputs = new float[][] {{0}, {0}, {1}, {1}};
   brain = new NeuralNetwork(structure);
   inputs = new float[structure[0]];
   for (int i = 0; i < inputs.length; i++)
@@ -26,7 +25,7 @@ void draw() {
 
   if (train) {
     train();
-    // show(5);
+    // xor(5);
   }
 }
 
@@ -42,7 +41,7 @@ void keyPressed() {
   }
 }
 
-void show(int resolution) {
+void xor(int resolution) {
   stroke(0);
   strokeWeight(1);
   for (float y = 0; y < (float) height/resolution; y++) {
